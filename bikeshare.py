@@ -40,7 +40,7 @@ def get_filters():
     
     # get user input for month (all, january, february, ... , june)
     filtering_option = input("Would you like to filter the data by 'month', 'day', 'both' or 'not at all'? ").lower()
-
+    print("Your filtering option is {}".format(filtering_option))
     if filtering_option.lower()=='month':
       month = input("Which month? - January, February, March, April, May, or June?: ").lower()
       while month not in ['january', 'february', 'march', 'april', 'may', 'june']:
