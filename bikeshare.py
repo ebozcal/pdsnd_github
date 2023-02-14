@@ -39,22 +39,22 @@ def get_filters():
     months = ['january', 'february', 'march', 'april', 'may', 'june']
     
     # get user input for month (all, january, february, ... , june)
-    answer = input("Would you like to filter the data by 'month', 'day', 'both' or 'not at all'? ").lower()
+    filtering_option = input("Would you like to filter the data by 'month', 'day', 'both' or 'not at all'? ").lower()
 
-    if answer.lower()=='month':
+    if filtering_option.lower()=='month':
       month = input("Which month? - January, February, March, April, May, or June?: ").lower()
       while month not in ['january', 'february', 'march', 'april', 'may', 'june']:
         month = input("Your input is invalid! Please enter a  month as January, February, March, April, May, or June: ").lower()
       day=None
       month = months.index(month) + 1
 
-    elif answer.lower()=='day':
+    elif filtering_option.lower()=='day':
       month = None
       day = input("Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?: ").title()
      
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    elif answer.lower()=='both':
+    elif filtering_option.lower()=='both':
       month = input("Which month - January, February, March, April, May, or June?: ").lower()
       day = input("Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?: ").title()
       
